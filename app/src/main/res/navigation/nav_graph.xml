@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentShop">
+    <fragment
+        android:id="@+id/fragmentShop"
+        android:name="com.example.phonestorebless.client.shop.FragmentShop"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" />
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.example.phonestorebless.client.profile.FragmentProfile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_fragmentProfile_to_fragmentSignIn"
+            app:destination="@id/fragmentSignIn" />
+        <action
+            android:id="@+id/action_fragmentProfile_to_fragmentSignUp"
+            app:destination="@id/fragmentSignUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSetings"
+        android:name="com.example.phonestorebless.client.setings.FragmentSetings"
+        android:label="fragment_setings"
+        tools:layout="@layout/fragment_setings" />
+    <fragment
+        android:id="@+id/fragmentSignIn"
+        android:name="com.example.phonestorebless.client.profile.FragmentSignIn"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+    <fragment
+        android:id="@+id/fragmentSignUp"
+        android:name="com.example.phonestorebless.client.profile.FragmentSignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+</navigation>

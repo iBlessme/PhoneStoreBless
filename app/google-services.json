@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "285982599260",
+    "project_id": "phonestorebless",
+    "storage_bucket": "phonestorebless.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285982599260:android:cbc351c82ea8ff43979e99",
+        "android_client_info": {
+          "package_name": "com.example.phonestorebless"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285982599260-1m4as6be93vgec3l7pr5bmrmvctvmnq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwnMWsNfFKz-9DCUv9ZIg7XqB2J2MamqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285982599260-1m4as6be93vgec3l7pr5bmrmvctvmnq1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

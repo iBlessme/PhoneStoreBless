@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".client.profile.FragmentSignIn">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Авторизация"
+           android:textColor="@color/purple_500"
+           android:textSize="30sp"
+           app:layout_constraintBottom_toTopOf="@+id/edtMail"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <EditText
+           android:id="@+id/edtMail"
+           android:layout_width="300dp"
+           android:layout_height="wrap_content"
+           android:hint="Почта"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <EditText
+           android:id="@+id/edtPassword"
+           android:layout_width="300dp"
+           android:layout_height="wrap_content"
+           android:hint="Пароль"
+           app:layout_constraintEnd_toEndOf="@+id/edtMail"
+           app:layout_constraintStart_toStartOf="@+id/edtMail"
+           app:layout_constraintTop_toBottomOf="@+id/edtMail" />
+
+       <Button
+           android:id="@+id/btnSignIn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Войти"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="@+id/edtPassword"
+           app:layout_constraintStart_toStartOf="@+id/edtPassword"
+           app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+       <TextView
+           android:id="@+id/textViewGoAuth"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="У меня нет аккаунта"
+           android:textColor="@color/teal_200"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="@+id/btnSignIn"
+           app:layout_constraintStart_toStartOf="@+id/btnSignIn"
+           app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".client.profile.FragmentSignUp">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       >
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Регистрация"
+           android:textColor="@color/purple_500"
+           android:textSize="30sp"
+           app:layout_constraintBottom_toTopOf="@+id/edtMail"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <EditText
+           android:id="@+id/edtMail"
+           android:layout_width="300dp"
+           android:layout_height="wrap_content"
+           android:hint="Почта"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           android:layout_marginBottom="150dp"/>
+
+       <EditText
+           android:id="@+id/edtPassword"
+           android:layout_width="300dp"
+           android:layout_height="wrap_content"
+           android:hint="Пароль"
+           app:layout_constraintEnd_toEndOf="@+id/edtMail"
+           app:layout_constraintStart_toStartOf="@+id/edtMail"
+           app:layout_constraintTop_toBottomOf="@+id/edtMail" />
+
+       <EditText
+           android:id="@+id/edtName"
+           android:layout_width="300dp"
+           android:layout_height="wrap_content"
+           android:hint="Имя"
+           app:layout_constraintEnd_toEndOf="@+id/edtPassword"
+           app:layout_constraintStart_toStartOf="@+id/edtPassword"
+           app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+       <EditText
+           android:id="@+id/edtNumberPhone"
+           android:layout_width="300dp"
+           android:layout_height="wrap_content"
+           android:hint="Номер телефона"
+           app:layout_constraintEnd_toEndOf="@+id/edtName"
+           app:layout_constraintStart_toStartOf="@+id/edtName"
+           app:layout_constraintTop_toBottomOf="@+id/edtName" />
+
+       <Button
+           android:id="@+id/btnSignUp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Зарегистрироваться"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="@+id/edtNumberPhone"
+           app:layout_constraintStart_toStartOf="@+id/edtNumberPhone"
+           app:layout_constraintTop_toBottomOf="@+id/edtNumberPhone" />
+
+       <TextView
+           android:id="@+id/txtViewGoAuth"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="У меня есть аккаунт"
+           android:textColor="@color/teal_200"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="@+id/btnSignUp"
+           app:layout_constraintStart_toStartOf="@+id/btnSignUp"
+           app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+       
+       
+       
+   </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    
+</FrameLayout>

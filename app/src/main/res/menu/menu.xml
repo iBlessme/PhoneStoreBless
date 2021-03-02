@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Магазин"
+        android:id="@+id/ic_shopFragment"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"/>
+    <item
+        android:title="Профиль"
+        android:id="@+id/ic_profileFragment"
+        android:icon="@drawable/ic_baseline_person_24"/>
+    <item
+        android:title="Настройки"
+        android:id="@+id/ic_settingsFragment"
+        android:icon="@drawable/ic_baseline_settings_24"/>
+
+
+</menu>

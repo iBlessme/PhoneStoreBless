@@ -75,7 +75,7 @@ class FragmentSignUp : Fragment() {
                     showToast("Пароль дожен быть не менее 6 символов")
                     return
                 }
-                edtNumberPhone.text.length == 11 ->{
+                edtNumberPhone.text.length != 11 ->{
                     showToast("Номер телефона должен содержать 11 цифр!")
                 }
                else -> mAuth.createUserWithEmailAndPassword(edtMail.text.toString(), edtPassword.text.toString())
@@ -83,6 +83,7 @@ class FragmentSignUp : Fragment() {
                            if(it.isSuccessful){
                                val currentUser = mAuth.currentUser
                                val currentUSerDb = databaseReference?.child((currentUser?.uid!!))
+
                                currentUSerDb?.child("mail")
                                        ?.setValue(edtMail.text.toString())
                                currentUSerDb?.child("password")
@@ -91,8 +92,14 @@ class FragmentSignUp : Fragment() {
                                        ?.setValue(edtName.text.toString())
                                currentUSerDb?.child("numberPhone")
                                        ?.setValue(edtNumberPhone.text.toString())
+                               currentUSerDb?.child("photoUrl")
+                                       ?.setValue(currentUser?.uid)
+                               currentUSerDb?.child("position")
+                                       ?.setValue("client")
                                showToast("Вы успешно зарегистрировались!")
                                replaceFragment(FragmentProfile())
+                           }else{
+                               showToast("Данный пользователь уже существует")
                            }
                        }
 

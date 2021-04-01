@@ -1,14 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentAddPosAdmin">
+    tools:context=".personal.admin.FragmentAddPosAdmin">
 
-    <!-- TODO: Update blank fragment layout -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавление сотрудника"
+        android:textColor="@color/purple_500"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtNamePersonal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNamePersonal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Имя сотрудника"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="300dp"/>
+
+    <EditText
+        android:id="@+id/edtMailPersonal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Почта сотрудника"
+        app:layout_constraintEnd_toEndOf="@+id/edtNamePersonal"
+        app:layout_constraintStart_toStartOf="@+id/edtNamePersonal"
+        app:layout_constraintTop_toBottomOf="@+id/edtNamePersonal" />
+
+    <EditText
+        android:id="@+id/edtPasswordPersonal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Пароль сотрудника"
+        app:layout_constraintEnd_toEndOf="@+id/edtMailPersonal"
+        app:layout_constraintStart_toStartOf="@+id/edtMailPersonal"
+        app:layout_constraintTop_toBottomOf="@+id/edtMailPersonal" />
+
+    <RadioGroup
+        android:id="@+id/RatioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/edtPasswordPersonal"
+        app:layout_constraintStart_toStartOf="@+id/edtPasswordPersonal"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordPersonal">
+
+        <RadioButton
+            android:id="@+id/rtbtnAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Администратор"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rtbtnStorage"
+            android:text="Склад"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAddPersonal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RatioGroup" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </FrameLayout>

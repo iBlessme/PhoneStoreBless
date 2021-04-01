@@ -1,4 +1,4 @@
-package com.example.phonestorebless
+package com.example.phonestorebless.personal
 
 import android.app.Activity
 import android.content.Intent
@@ -6,9 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
-import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
-import com.example.phonestorebless.client.profile.FragmentProfile
+import com.example.phonestorebless.MainActivity
+import com.example.phonestorebless.R
 import com.example.phonestorebless.personal.admin.AdminActivity
 import com.example.phonestorebless.personal.bookKeep.BookKeepingActivity
 import com.example.phonestorebless.personal.humanDep.HumanDepActivity
@@ -19,8 +18,6 @@ import kotlinx.android.synthetic.main.activity_sign_in_job.*
 import kotlinx.android.synthetic.main.activity_sign_in_job.btnSignIn
 import kotlinx.android.synthetic.main.activity_sign_in_job.edtMail
 import kotlinx.android.synthetic.main.activity_sign_in_job.edtPassword
-import kotlinx.android.synthetic.main.fragment_profile.*
-import kotlinx.android.synthetic.main.fragment_sign_in.*
 
 class ActivitySignInJob : AppCompatActivity() {
 

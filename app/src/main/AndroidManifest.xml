@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.phonestorebless">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -11,6 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PhoneStoreBless">
+        <activity android:name=".personal.bookKeep.BookKeepingActivity" />
+        <activity android:name=".personal.storage.StorageActivity" />
+        <activity android:name=".personal.humanDep.HumanDepActivity" />
+        <activity android:name=".personal.admin.AdminActivity" />
+        <activity android:name=".personal.ActivitySignInJob" />
+        <activity android:name=".enterJob.ActivitySignInJob" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

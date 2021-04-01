@@ -6,6 +6,7 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.media.Image
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +26,7 @@ import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_sign_in.*
 import java.io.ByteArrayOutputStream
+import java.io.File
 
 class FragmentProfile : Fragment() {
 
@@ -77,6 +79,7 @@ class FragmentProfile : Fragment() {
         if (currentUser != null) {
             //Заполнение пользователя
             loadProfile()
+            loadPictureProfile()
         } else {
             replaceFragment(FragmentSignIn())
         }
@@ -108,6 +111,20 @@ class FragmentProfile : Fragment() {
     }
     //Функция загрузки изображения пользователя
     private fun loadPictureProfile(){
+        val user = auth.currentUser
+        val uid = user?.uid.toString()
+        val photoURL = user?.photoUrl
+        val storage = FirebaseStorage.getInstance()
+        val storageRef = storage.reference.child("users")
+        val pathReference = storageRef.child("users/${uid}.jpg")
+
+        pathReference.getBytes(Long.MAX_VALUE).addOnSuccessListener {
+
+        }
+
+
+
+
 
     }
     private fun addPictureInStorage(){

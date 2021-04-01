@@ -16,7 +16,7 @@ class AdminActivity : AppCompatActivity() {
         val changedFragment = FragmentChangedPosAdmin()
         val addPosFragment = FragmentAddPosAdmin()
         val settingAdmin = FragmentSettingsAdmin()
-        val test = "test"
+        val test2 = "test"
 
         makeCurrentFragment(changedFragment)
         bottomNavigationViewAdmin.setOnNavigationItemSelectedListener {

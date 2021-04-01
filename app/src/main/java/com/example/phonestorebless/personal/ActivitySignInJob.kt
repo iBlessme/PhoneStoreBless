@@ -9,8 +9,6 @@ import android.widget.Toast
 import com.example.phonestorebless.MainActivity
 import com.example.phonestorebless.R
 import com.example.phonestorebless.personal.admin.AdminActivity
-import com.example.phonestorebless.personal.bookKeep.BookKeepingActivity
-import com.example.phonestorebless.personal.humanDep.HumanDepActivity
 import com.example.phonestorebless.personal.storage.StorageActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -83,13 +81,8 @@ class ActivitySignInJob : AppCompatActivity() {
                     val position = snapshot.child("position").value.toString()
                     if (position == "admin")
                         replaceActivity(AdminActivity())
-                    else if (position == "bookKeep")
-                        replaceActivity(BookKeepingActivity())
                     else if (position == "storage")
                     replaceActivity(StorageActivity())
-                    else if (position == "humanDep")
-                    replaceActivity(HumanDepActivity())
-
             }
 
             override fun onCancelled(error: DatabaseError) {

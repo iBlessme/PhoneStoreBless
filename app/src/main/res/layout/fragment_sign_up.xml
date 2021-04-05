@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".client.profile.FragmentSignUp">
+    tools:context=".client.profile.FragmentSignUp"
+    android:background="#FF9800">
 
    <androidx.constraintlayout.widget.ConstraintLayout
        android:layout_width="match_parent"
@@ -15,8 +16,9 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="Регистрация"
-           android:textColor="@color/purple_500"
+           android:textColor="#FFEB3B"
            android:textSize="30sp"
+           android:textStyle="bold"
            app:layout_constraintBottom_toTopOf="@+id/edtMail"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +77,8 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="У меня есть аккаунт"
-           android:textColor="@color/teal_200"
+           android:textColor="#3F51B5"
+           android:textStyle="bold"
            app:layout_constraintBottom_toBottomOf="parent"
            app:layout_constraintEnd_toEndOf="@+id/btnSignUp"
            app:layout_constraintStart_toStartOf="@+id/btnSignUp"

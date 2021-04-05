@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#FF9800">
 
     <fragment
 
@@ -25,13 +26,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/bottomNavigationView"
         android:foreground="?attr/selectableItemBackground"
-        app:itemIconTint="#00FF99"
-        app:itemTextColor="#00FF99"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFEB3B"
         app:menu="@menu/menu"
         app:labelVisibilityMode="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#593502"/>
 
 
 

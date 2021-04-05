@@ -37,6 +37,7 @@ class ActivitySignInJob : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
         btnSignIn.setOnClickListener {
             letsWork()
         }

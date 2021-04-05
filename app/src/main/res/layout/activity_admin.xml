@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".personal.admin.AdminActivity">
+    tools:context=".personal.admin.AdminActivity"
+    android:background="#FF9800">
 
     <fragment
 
@@ -25,12 +26,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/bottomNavigationViewAdmin"
         android:foreground="?attr/selectableItemBackground"
-        app:itemIconTint="#00FF99"
-        app:itemTextColor="#00FF99"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFEB3B"
         app:menu="@menu/menu_admin"
         app:labelVisibilityMode="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#593502"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import android.app.Instrumentation
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Icon
 import android.media.Image
 import android.net.Uri
 import android.os.Bundle
@@ -43,7 +44,6 @@ class FragmentProfile : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_profile, container, false)
     }
-
     override fun onStart() {
         super.onStart()
 
@@ -70,8 +70,6 @@ class FragmentProfile : Fragment() {
             openGallerey()
         }
     }
-
-
     //Функция проверки пользователя
     private fun checkUser() {
         mAuth = FirebaseAuth.getInstance()
@@ -84,7 +82,6 @@ class FragmentProfile : Fragment() {
             replaceFragment(FragmentSignIn())
         }
     }
-
     //Функция заргузки пользователя
     private fun loadProfile() {
         val user = auth.currentUser
@@ -117,11 +114,22 @@ class FragmentProfile : Fragment() {
         val storage = FirebaseStorage.getInstance()
         val storageRef = storage.reference.child("users")
         val pathReference = storageRef.child("users/${uid}.jpg")
+        val localFile = File.createTempFile("images", "jpg")
+//        pathReference.getFile(localFile).addOnSuccessListener{
+//
+//        }.addOnFailureListener{
+//
+//        }
+//            pathReference.getBytes(Long.MAX_VALUE).addOnSuccessListener {
+//
+//            }
 
-        pathReference.getBytes(Long.MAX_VALUE).addOnSuccessListener {
-
-        }
-
+//       val ONE_MEGABYTE: Long = 1024 * 1024
+//        pathReference.getBytes(ONE_MEGABYTE).addOnSuccessListener {
+//        imageProfile.setImageBitmap(ONE_MEGABYTE).addOnS
+//        }.addOnFailureListener{
+//
+//        }
 
 
 
@@ -149,7 +157,6 @@ class FragmentProfile : Fragment() {
 
         }
     }
-
     //Смена фрагмента
     fun Fragment.replaceFragment(fragment: Fragment) {
         fragmentManager?.beginTransaction()
@@ -157,13 +164,16 @@ class FragmentProfile : Fragment() {
             ?.replace(R.id.nav_host_fragment, fragment)
             ?.commit()
     }
-
-
+    //Функция открытия галерии
     fun Fragment.openGallerey() {
 
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
         startActivityForResult(intent, 1)
+    }
+    //Функции скачивании фотографии пользователя
+    fun loadImageProfile(){
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -174,6 +184,7 @@ class FragmentProfile : Fragment() {
         }
     }
 }
+
 
 
 

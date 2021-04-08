@@ -94,8 +94,8 @@ class FragmentSignUp : Fragment() {
                                        ?.setValue(edtNumberPhone.text.toString())
                                currentUSerDb?.child("photoUrl")
                                        ?.setValue(currentUser?.uid)
-                               currentUSerDb?.child("position")
-                                       ?.setValue("client")
+//                               currentUSerDb?.child("position")
+//                                       ?.setValue("client")
                                showToast("Вы успешно зарегистрировались!")
                                replaceFragment(FragmentProfile())
                            }else{

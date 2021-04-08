@@ -30,7 +30,7 @@ class ActivitySignInJob : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
-        databaseReference = database?.reference!!.child("Users")
+        databaseReference = database?.reference!!.child("Personals")
         auth = FirebaseAuth.getInstance()
 
         btnGoBack.setOnClickListener {
